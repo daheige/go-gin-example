@@ -2,7 +2,7 @@ package article_service
 
 import (
 	"encoding/json"
-	
+
 	"github.com/EDDYCJY/go-gin-example/models"
 	"github.com/EDDYCJY/go-gin-example/pkg/gredis"
 	"github.com/EDDYCJY/go-gin-example/pkg/logging"
@@ -49,6 +49,7 @@ func (a *Article) Edit() error {
 		"desc":            a.Desc,
 		"content":         a.Content,
 		"cover_image_url": a.CoverImageUrl,
+		"state":           a.State,
 		"modified_by":     a.ModifiedBy,
 	})
 }
